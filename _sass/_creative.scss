@@ -95,7 +95,7 @@ aside {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
-                color: $theme-dark;
+                color: white;
                 &:hover {
                     color: $theme-primary;
                 }
@@ -112,6 +112,7 @@ aside {
             }
         }
     }
+
     @media (min-width: 768px) {
         background-color: transparent;
         border-color: fade(white, 30%);
@@ -127,6 +128,44 @@ aside {
             color: fade(white, 70%);
             &:hover {
                 color: white;
+            }
+        }
+        &.affix {
+            background-color: white;
+            border-color: fade($theme-dark, 5%);
+            .navbar-header .navbar-brand {
+                color: $theme-primary;
+                font-size: 14px;
+                &:hover,
+                &:focus {
+                    color: darken($theme-primary, 10%);
+                }
+            }
+            .nav > li > a,
+            .nav > li > a:focus {
+                color: $theme-dark;
+                &:hover {
+                    color: $theme-primary;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        background-color: white;
+        border-color: fade(white, 30%);
+        .navbar-header .navbar-brand {
+            color: fade(white, 70%);
+            &:hover,
+            &:focus {
+                color: $theme-dark;
+            }
+        }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: fade(white, 70%);
+            &:hover {
+                color: $theme-dark;
             }
         }
         &.affix {
